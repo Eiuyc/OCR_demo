@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="static/bootstrap.css">
+		<title>simple OCR Demo</title>
+	</head>
+
+	<body>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-4">{{ head }}</h1>
+				<p class="lead">This is upload page.</p>
+				<form action="" enctype='multipart/form-data' method='POST'>
+					<div class="input-group mb-3">
+						<div class="custom-file">
+							<input onchange="f(this.files[0])" type="file" name="file" class="custom-file-input"
+								id="inputGroupFile02" />
+							<label id="filename_label" class="custom-file-label" for="inputGroupFile02"
+								aria-describedby="inputGroupFileAddon02">Choose file</label>
+						</div>
+						<div class="input-group-append">
+							<input type="submit" value="Upload" class="input-group-text" id="inputGroupFileAddon02" />
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		<script>
+			function f(file) {
+				$("#filename_label").html(file.name);
+			}
+		</script>
+		<script src="static/jquery.js"></script>
+		<script src="static/popper.js"></script>
+		<script src="static/bootstrap.js"></script>
+	</body>
+
+</html>

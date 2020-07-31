@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="static/bootstrap.css">
+		<title>simple OCR Demo</title>
+	</head>
+
+	<body>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-4">{{ head }}</h1>
+				<p class="lead">This is result page.</p>
+				<div class="card" style="width: 30rem;">
+					<img src="{{f}}" class="card-img-top">
+				</div>
+				<div class="card" style="width: 30rem;">
+					<img src="{{f}}_adjusted.jpg_predict.jpg" class="card-img-top">
+					<div class="card-body">
+						<p class="card-title">Recognition result:</p>
+						{% for i in rst %}
+							<h5 class="card-text">{{rst[i]}}</h5>
+						{% endfor %}
+					</div>
+				</div>
+				<br>
+				<a href="/" class="btn btn-primary">Go back</a>
+
+			</div>
+		</div>
+
+		<script src="static/jquery.js"></script>
+		<script src="static/popper.js"></script>
+		<script src="static/bootstrap.js"></script>
+	</body>
+
+</html>
